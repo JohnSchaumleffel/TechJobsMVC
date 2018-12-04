@@ -22,6 +22,8 @@ namespace TechJobs.Controllers
 
             if (string.IsNullOrEmpty(searchTerm))
             {
+                jobs = JobData.FindAll();
+                ViewBag.jobs = jobs;
                 return View("Index");
             }
 
